@@ -5,15 +5,31 @@ import (
 	"math"
 )
 
-func Day01() {
-	input, err := NewInputFromFile("./day01/input")
+type Day01 struct{}
+
+type Day01Output struct {
+	SimilarityScore int
+	TotalDistance   int
+}
+
+func (d Day01) Cmd() {
+	output, err := d.Exec("./day01/input")
 	if err != nil {
 		panic(err)
+	}
+	fmt.Printf("Day01 / Part01 (Total Distance): %v \n", output.TotalDistance)
+	fmt.Printf("Day01 / Part02 (Similarity Score): %v \n", output.SimilarityScore)
+}
+
+func (d Day01) Exec(inputFilename string) (Day01Output, error) {
+	input, err := NewInputFromFile(inputFilename)
+	if err != nil {
+		return Day01Output{}, fmt.Errorf("error reading input from file: %v", err)
 	}
 
 	lidl1, lidl2, err := input.Parse()
 	if err != nil {
-		panic(err)
+		return Day01Output{}, fmt.Errorf("error parsing input: %v", err)
 	}
 
 	totalDistance := 0.0
@@ -24,8 +40,6 @@ func Day01() {
 		totalDistance += distance
 	}
 
-	fmt.Printf("total distance: %.0f \n", totalDistance)
-
 	similarityScore := 0
 	for i := 0; i < lidl1.Len(); i++ {
 		v1 := lidl1.Get(i)
@@ -33,5 +47,8 @@ func Day01() {
 		similarityScore += v1 * v1Lidl2Frequency
 	}
 
-	fmt.Printf("similarity score: %v \n", similarityScore)
+	return Day01Output{
+		SimilarityScore: similarityScore,
+		TotalDistance:   int(totalDistance),
+	}, nil
 }

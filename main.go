@@ -17,7 +17,7 @@ func main() {
 	}
 	switch day {
 	case 1:
-		day01.Day01()
+		day01.Day01{}.Cmd()
 	default:
 		panic(fmt.Sprintf("day provided is out of bounds: %v", *dayStr))
 	}

@@ -13,7 +13,7 @@ jobs:
       - name: Display Go version
         run: go version
       - name: Build
-        run: go build 
+        run: go build ./...
       - name: Test
         run: go test ./...
       - name: Solutions 

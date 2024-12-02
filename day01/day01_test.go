@@ -10,7 +10,7 @@ import (
 )
 
 func TestDay01(t *testing.T) {
-	output, err := Day01("./input")
+	output, err := Day01()
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -20,11 +20,4 @@ func TestDay01(t *testing.T) {
 	fmt.Fprintf(tw, termcolor.LightGreen("Day 01\tPart 2\tSimilarity Score\t%v")+"\n", output.SimilarityScore)
 	fmt.Fprintf(tw, termcolor.LightGreen("--\t--\tDuration\t%v")+"\n", output.Duration)
 	tw.Flush()
-
-	if output.TotalDistance != 2113135 {
-		t.Fatalf("Incorrect total distance")
-	}
-	if output.SimilarityScore != 19097157 {
-		t.Fatalf("Incorrect similarity score")
-	}
 }

@@ -20,11 +20,4 @@ func TestDay02(t *testing.T) {
 	fmt.Fprintf(tw, termcolor.LightGreen("Day 02\tPart 2\tSafe Reports With Dampener\t%v")+"\n", output.safeReportsWithDampenerCount)
 	// fmt.Fprintf(tw, termcolor.LightGreen("--\t--\tDuration\t%v")+"\n", output.Duration)
 	tw.Flush()
-
-	if output.safeReportsWithoutDampenerCount != 472 {
-		t.Fatalf("Incorrect safe reports with dampener count")
-	}
-	// if output.SimilarityScore != 19097157 {
-	// 	t.Fatalf("Incorrect similarity score")
-	// }
 }

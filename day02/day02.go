@@ -1,6 +1,7 @@
 package day02
 
 import (
+	"os"
 	"strings"
 	"time"
 )
@@ -11,10 +12,14 @@ type Day02Output struct {
 	SafeReportsWithoutDampenerCount int
 }
 
-func Day02() (Day02Output, error) {
+func Day02(filename string) (Day02Output, error) {
 	at := time.Now()
 
-	lines := strings.Split(day02Input, "\n")
+	file, err := os.ReadFile(filename)
+	if err != nil {
+		return Day02Output{}, err
+	}
+	lines := strings.Split(string(file), "\n")
 
 	safeReportsWithoutDampenerCount := 0
 	safeReportsWithDampenerCount := 0

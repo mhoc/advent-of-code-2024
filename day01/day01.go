@@ -3,25 +3,18 @@ package day01
 import (
 	"fmt"
 	"math"
+	"time"
 )
 
-type Day01 struct{}
-
 type Day01Output struct {
+	Duration        time.Duration
 	SimilarityScore int
 	TotalDistance   int
 }
 
-func (d Day01) Cmd() {
-	output, err := d.Exec("./day01/input")
-	if err != nil {
-		panic(err)
-	}
-	fmt.Printf("Day01 / Part01 (Total Distance): %v \n", output.TotalDistance)
-	fmt.Printf("Day01 / Part02 (Similarity Score): %v \n", output.SimilarityScore)
-}
+func Day01(inputFilename string) (Day01Output, error) {
+	at := time.Now()
 
-func (d Day01) Exec(inputFilename string) (Day01Output, error) {
 	input, err := NewInputFromFile(inputFilename)
 	if err != nil {
 		return Day01Output{}, fmt.Errorf("error reading input from file: %v", err)
@@ -48,6 +41,7 @@ func (d Day01) Exec(inputFilename string) (Day01Output, error) {
 	}
 
 	return Day01Output{
+		Duration:        time.Since(at),
 		SimilarityScore: similarityScore,
 		TotalDistance:   int(totalDistance),
 	}, nil

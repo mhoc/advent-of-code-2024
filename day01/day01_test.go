@@ -2,17 +2,25 @@ package day01
 
 import (
 	"fmt"
+	"os"
 	"testing"
+	"text/tabwriter"
+
+	"github.com/mhoc/termcolor"
 )
 
 func TestDay01(t *testing.T) {
-	d := Day01{}
-	output, err := d.Exec("./input")
+	output, err := Day01("./input")
 	if err != nil {
 		t.Fatal(err)
 	}
-	fmt.Printf("          Day01 / Part01 - Total Distance: %v \n", output.TotalDistance)
-	fmt.Printf("          Day01 / Part02 - Similarity Score: %v \n", output.SimilarityScore)
+
+	tw := tabwriter.NewWriter(os.Stdout, 0, 8, 2, ' ', 0)
+	fmt.Fprintf(tw, termcolor.LightGreen("Day 01\tPart 1\tTotal Distance\t%v")+"\n", output.TotalDistance)
+	fmt.Fprintf(tw, termcolor.LightGreen("Day 01\tPart 2\tSimilarity Score\t%v")+"\n", output.SimilarityScore)
+	fmt.Fprintf(tw, termcolor.LightGreen("--\t--\tDuration\t%v")+"\n", output.Duration)
+	tw.Flush()
+
 	if output.TotalDistance != 2113135 {
 		t.Fatalf("Incorrect total distance")
 	}

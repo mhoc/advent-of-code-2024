@@ -2,14 +2,18 @@ package day02
 
 import (
 	"strings"
+	"time"
 )
 
 type Day02Output struct {
-	safeReportsWithDampenerCount    int
-	safeReportsWithoutDampenerCount int
+	Duration                        time.Duration
+	SafeReportsWithDampenerCount    int
+	SafeReportsWithoutDampenerCount int
 }
 
 func Day02() (Day02Output, error) {
+	at := time.Now()
+
 	lines := strings.Split(day02Input, "\n")
 
 	safeReportsWithoutDampenerCount := 0
@@ -28,7 +32,8 @@ func Day02() (Day02Output, error) {
 	}
 
 	return Day02Output{
-		safeReportsWithDampenerCount:    safeReportsWithDampenerCount,
-		safeReportsWithoutDampenerCount: safeReportsWithoutDampenerCount,
+		Duration:                        time.Since(at),
+		SafeReportsWithDampenerCount:    safeReportsWithDampenerCount,
+		SafeReportsWithoutDampenerCount: safeReportsWithoutDampenerCount,
 	}, nil
 }

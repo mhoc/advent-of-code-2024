@@ -9,5 +9,9 @@ jobs:
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
-      - run: bun -v
-      - run: bun test
+      - name: Bun Version
+        run: bun -v
+      - name: Day 01
+        run: bun test --test-name-pattern day01
+      - name: Day 02
+        run: bun test --test-name-pattern day02

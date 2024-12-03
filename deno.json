@@ -1,0 +1,12 @@
+{
+  "tasks": {
+    "all": "deno test --allow-read",
+    "all:bench": "deno bench --allow-read",
+    "day01": "deno test --filter test_day01 --allow-read",
+    "day02": "deno test --filter test_day02 --allow-read",
+    "day03": "deno test --filter test_day03 --allow-read"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1"
+  }
+}

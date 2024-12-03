@@ -1,0 +1,17 @@
+name: Build
+on: [push, pull_request]
+jobs:
+  Build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - name: Deno Version
+        run: deno --version
+      - name: Solutions 
+        run: deno run all
+      - name: Benchmark
+        run: deno run all:bench

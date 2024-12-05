@@ -4,21 +4,17 @@ import { day03 } from "./day03/day03.ts";
 import { day04 } from "./day04/day04.ts";
 
 Deno.bench(function day01_all() {
-  const data = Deno.readTextFileSync("./src/day01/input");
-  day01(data);
+  day01(Deno.readTextFileSync("./src/day01/input"));
 });
 
 Deno.bench(function day02_all() {
-  const data = Deno.readTextFileSync("./src/day02/input");
-  day02(data);
+  day02(Deno.readTextFileSync("./src/day02/input"));
 });
 
 Deno.bench(function day03_all() {
-  const data = Deno.readTextFileSync("./src/day03/input");
-  day03(data);
+  day03(Deno.readTextFileSync("./src/day03/input"));
 });
 
 Deno.bench(function day04_all() {
-  const data = Deno.readTextFileSync("./src/day04/input");
-  day04(data);
+  day04(Deno.readFileSync("./src/day04/input"));
 });

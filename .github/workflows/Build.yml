@@ -11,6 +11,8 @@ jobs:
           deno-version: v2.x
       - name: Deno Version
         run: deno --version
+      - name: Deno Install
+        run: deno i
       - name: Solutions 
         run: deno run all
       - name: Benchmark

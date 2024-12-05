@@ -63,44 +63,44 @@ export function day04(data: Uint8Array) {
   for (let colno = 0; colno < grid[0].length; colno++) {
     if (grid[0][colno] === 88) {
       // Right
-      if (grid[0]?.[colno + 1] === 77) {
-        if (grid[0]?.[colno + 2] === 65) {
-          if (grid[0]?.[colno + 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[0]?.[colno + 1] === 77 &&
+        grid[0]?.[colno + 2] === 65 &&
+        grid[0]?.[colno + 3] === 83
+      ) {
+        result[0]++;
       }
       // Bottom-Right
-      if (grid[1]?.[colno + 1] === 77) {
-        if (grid[2]?.[colno + 2] === 65) {
-          if (grid[3]?.[colno + 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[1]?.[colno + 1] === 77 &&
+        grid[2]?.[colno + 2] === 65 &&
+        grid[3]?.[colno + 3] === 83
+      ) {
+        result[0]++;
       }
       // Bottom
-      if (grid[1]?.[colno] === 77) {
-        if (grid[2]?.[colno] === 65) {
-          if (grid[3]?.[colno] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[1]?.[colno] === 77 &&
+        grid[2]?.[colno] === 65 &&
+        grid[3]?.[colno] === 83
+      ) {
+        result[0]++;
       }
       // Bottom-Left
-      if (grid[1]?.[colno - 1] === 77) {
-        if (grid[2]?.[colno - 2] === 65) {
-          if (grid[3]?.[colno - 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[1]?.[colno - 1] === 77 &&
+        grid[2]?.[colno - 2] === 65 &&
+        grid[3]?.[colno - 3] === 83
+      ) {
+        result[0]++;
       }
       // Left
-      if (grid[0]?.[colno - 1] === 77) {
-        if (grid[0]?.[colno - 2] === 65) {
-          if (grid[0]?.[colno - 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[0]?.[colno - 1] === 77 &&
+        grid[0]?.[colno - 2] === 65 &&
+        grid[0]?.[colno - 3] === 83
+      ) {
+        result[0]++;
       }
     }
   }
@@ -110,44 +110,44 @@ export function day04(data: Uint8Array) {
   // those numbers when we do the perimeter rows.
   for (let lineno = 3; lineno < grid.length - 3; lineno++) {
     if (grid[lineno][0] === 88) {
-      if (grid[lineno - 1]?.[0] === 77) {
-        if (grid[lineno - 2]?.[0] === 65) {
-          if (grid[lineno - 3]?.[0] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno - 1]?.[0] === 77 &&
+        grid[lineno - 2]?.[0] === 65 &&
+        grid[lineno - 3]?.[0] === 83
+      ) {
+        result[0]++;
       }
       // Top-Right
-      if (grid[lineno - 1]?.[1] === 77) {
-        if (grid[lineno - 2]?.[2] === 65) {
-          if (grid[lineno - 3]?.[3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno - 1]?.[1] === 77 &&
+        grid[lineno - 2]?.[2] === 65 &&
+        grid[lineno - 3]?.[3] === 83
+      ) {
+        result[0]++;
       }
       // Right
-      if (grid[lineno]?.[1] === 77) {
-        if (grid[lineno]?.[2] === 65) {
-          if (grid[lineno]?.[3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno]?.[1] === 77 &&
+        grid[lineno]?.[2] === 65 &&
+        grid[lineno]?.[3] === 83
+      ) {
+        result[0]++;
       }
       // Bottom-Right
-      if (grid[lineno + 1]?.[1] === 77) {
-        if (grid[lineno + 2]?.[2] === 65) {
-          if (grid[lineno + 3]?.[3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno + 1]?.[1] === 77 &&
+        grid[lineno + 2]?.[2] === 65 &&
+        grid[lineno + 3]?.[3] === 83
+      ) {
+        result[0]++;
       }
       // Bottom
-      if (grid[lineno + 1]?.[0] === 77) {
-        if (grid[lineno + 2]?.[0] === 65) {
-          if (grid[lineno + 3]?.[0] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno + 1]?.[0] === 77 &&
+        grid[lineno + 2]?.[0] === 65 &&
+        grid[lineno + 3]?.[0] === 83
+      ) {
+        result[0]++;
       }
     }
   }
@@ -156,44 +156,44 @@ export function day04(data: Uint8Array) {
   for (let colno = 0; colno < grid[grid.length - 1].length; colno++) {
     if (grid[grid.length - 1][colno] === 88) {
       // Top
-      if (grid[grid.length - 2]?.[colno] === 77) {
-        if (grid[grid.length - 3]?.[colno] === 65) {
-          if (grid[grid.length - 4]?.[colno] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[grid.length - 2]?.[colno] === 77 &&
+        grid[grid.length - 3]?.[colno] === 65 &&
+        grid[grid.length - 4]?.[colno] === 83
+      ) {
+        result[0]++;
       }
       // Top-Right
-      if (grid[grid.length - 2]?.[colno + 1] === 77) {
-        if (grid[grid.length - 3]?.[colno + 2] === 65) {
-          if (grid[grid.length - 4]?.[colno + 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[grid.length - 2]?.[colno + 1] === 77 &&
+        grid[grid.length - 3]?.[colno + 2] === 65 &&
+        grid[grid.length - 4]?.[colno + 3] === 83
+      ) {
+        result[0]++;
       }
       // Right
-      if (grid[grid.length - 1]?.[colno + 1] === 77) {
-        if (grid[grid.length - 1]?.[colno + 2] === 65) {
-          if (grid[grid.length - 1]?.[colno + 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[grid.length - 1]?.[colno + 1] === 77 &&
+        grid[grid.length - 1]?.[colno + 2] === 65 &&
+        grid[grid.length - 1]?.[colno + 3] === 83
+      ) {
+        result[0]++;
       }
       // Left
-      if (grid[grid.length - 1]?.[colno - 1] === 77) {
-        if (grid[grid.length - 1]?.[colno - 2] === 65) {
-          if (grid[grid.length - 1]?.[colno - 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[grid.length - 1]?.[colno - 1] === 77 &&
+        grid[grid.length - 1]?.[colno - 2] === 65 &&
+        grid[grid.length - 1]?.[colno - 3] === 83
+      ) {
+        result[0]++;
       }
       // Top-Left
-      if (grid[grid.length - 2]?.[colno - 1] === 77) {
-        if (grid[grid.length - 3]?.[colno - 2] === 65) {
-          if (grid[grid.length - 4]?.[colno - 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[grid.length - 2]?.[colno - 1] === 77 &&
+        grid[grid.length - 3]?.[colno - 2] === 65 &&
+        grid[grid.length - 4]?.[colno - 3] === 83
+      ) {
+        result[0]++;
       }
     }
   }
@@ -205,44 +205,44 @@ export function day04(data: Uint8Array) {
     const colno = grid[lineno].length - 1;
     if (grid[lineno][colno] === 88) {
       // Top
-      if (grid[lineno - 1]?.[colno] === 77) {
-        if (grid[lineno - 2]?.[colno] === 65) {
-          if (grid[lineno - 3]?.[colno] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno - 1]?.[colno] === 77 &&
+        grid[lineno - 2]?.[colno] === 65 &&
+        grid[lineno - 3]?.[colno] === 83
+      ) {
+        result[0]++;
       }
       // Bottom
-      if (grid[lineno + 1]?.[colno] === 77) {
-        if (grid[lineno + 2]?.[colno] === 65) {
-          if (grid[lineno + 3]?.[colno] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno + 1]?.[colno] === 77 &&
+        grid[lineno + 2]?.[colno] === 65 &&
+        grid[lineno + 3]?.[colno] === 83
+      ) {
+        result[0]++;
       }
       // Bottom-Left
-      if (grid[lineno + 1]?.[colno - 1] === 77) {
-        if (grid[lineno + 2]?.[colno - 2] === 65) {
-          if (grid[lineno + 3]?.[colno - 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno + 1]?.[colno - 1] === 77 &&
+        grid[lineno + 2]?.[colno - 2] === 65 &&
+        grid[lineno + 3]?.[colno - 3] === 83
+      ) {
+        result[0]++;
       }
       // Left
-      if (grid[lineno]?.[colno - 1] === 77) {
-        if (grid[lineno]?.[colno - 2] === 65) {
-          if (grid[lineno]?.[colno - 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno]?.[colno - 1] === 77 &&
+        grid[lineno]?.[colno - 2] === 65 &&
+        grid[lineno]?.[colno - 3] === 83
+      ) {
+        result[0]++;
       }
       // Top-Left
-      if (grid[lineno - 1]?.[colno - 1] === 77) {
-        if (grid[lineno - 2]?.[colno - 2] === 65) {
-          if (grid[lineno - 3]?.[colno - 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno - 1]?.[colno - 1] === 77 &&
+        grid[lineno - 2]?.[colno - 2] === 65 &&
+        grid[lineno - 3]?.[colno - 3] === 83
+      ) {
+        result[0]++;
       }
     }
   }
@@ -251,44 +251,44 @@ export function day04(data: Uint8Array) {
   for (let colno = 0; colno < grid[1].length; colno++) {
     if (grid[1][colno] === 88) {
       // Right
-      if (grid[1]?.[colno + 1] === 77) {
-        if (grid[1]?.[colno + 2] === 65) {
-          if (grid[1]?.[colno + 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[1]?.[colno + 1] === 77 &&
+        grid[1]?.[colno + 2] === 65 &&
+        grid[1]?.[colno + 3] === 83
+      ) {
+        result[0]++;
       }
       // Bottom-Right
-      if (grid[2]?.[colno + 1] === 77) {
-        if (grid[3]?.[colno + 2] === 65) {
-          if (grid[4]?.[colno + 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[2]?.[colno + 1] === 77 &&
+        grid[3]?.[colno + 2] === 65 &&
+        grid[4]?.[colno + 3] === 83
+      ) {
+        result[0]++;
       }
       // Bottom
-      if (grid[2]?.[colno] === 77) {
-        if (grid[3]?.[colno] === 65) {
-          if (grid[4]?.[colno] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[2]?.[colno] === 77 &&
+        grid[3]?.[colno] === 65 &&
+        grid[4]?.[colno] === 83
+      ) {
+        result[0]++;
       }
       // Bottom-Left
-      if (grid[2]?.[colno - 1] === 77) {
-        if (grid[3]?.[colno - 2] === 65) {
-          if (grid[4]?.[colno - 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[2]?.[colno - 1] === 77 &&
+        grid[3]?.[colno - 2] === 65 &&
+        grid[4]?.[colno - 3] === 83
+      ) {
+        result[0]++;
       }
       // Left
-      if (grid[1]?.[colno - 1] === 77) {
-        if (grid[1]?.[colno - 2] === 65) {
-          if (grid[1]?.[colno - 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[1]?.[colno - 1] === 77 &&
+        grid[1]?.[colno - 2] === 65 &&
+        grid[1]?.[colno - 3] === 83
+      ) {
+        result[0]++;
       }
     }
   }
@@ -298,44 +298,44 @@ export function day04(data: Uint8Array) {
   // those numbers when we do the perimeter rows.
   for (let lineno = 3; lineno < grid.length - 3; lineno++) {
     if (grid[lineno][1] === 88) {
-      if (grid[lineno - 1]?.[1] === 77) {
-        if (grid[lineno - 2]?.[1] === 65) {
-          if (grid[lineno - 3]?.[1] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno - 1]?.[1] === 77 &&
+        grid[lineno - 2]?.[1] === 65 &&
+        grid[lineno - 3]?.[1] === 83
+      ) {
+        result[0]++;
       }
       // Top-Right
-      if (grid[lineno - 1]?.[2] === 77) {
-        if (grid[lineno - 2]?.[3] === 65) {
-          if (grid[lineno - 3]?.[4] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno - 1]?.[2] === 77 &&
+        grid[lineno - 2]?.[3] === 65 &&
+        grid[lineno - 3]?.[4] === 83
+      ) {
+        result[0]++;
       }
       // Right
-      if (grid[lineno]?.[2] === 77) {
-        if (grid[lineno]?.[3] === 65) {
-          if (grid[lineno]?.[4] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno]?.[2] === 77 &&
+        grid[lineno]?.[3] === 65 &&
+        grid[lineno]?.[4] === 83
+      ) {
+        result[0]++;
       }
       // Bottom-Right
-      if (grid[lineno + 1]?.[2] === 77) {
-        if (grid[lineno + 2]?.[3] === 65) {
-          if (grid[lineno + 3]?.[4] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno + 1]?.[2] === 77 &&
+        grid[lineno + 2]?.[3] === 65 &&
+        grid[lineno + 3]?.[4] === 83
+      ) {
+        result[0]++;
       }
       // Bottom
-      if (grid[lineno + 1]?.[1] === 77) {
-        if (grid[lineno + 2]?.[1] === 65) {
-          if (grid[lineno + 3]?.[1] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno + 1]?.[1] === 77 &&
+        grid[lineno + 2]?.[1] === 65 &&
+        grid[lineno + 3]?.[1] === 83
+      ) {
+        result[0]++;
       }
     }
   }
@@ -344,44 +344,44 @@ export function day04(data: Uint8Array) {
   for (let colno = 0; colno < grid[grid.length - 2].length; colno++) {
     if (grid[grid.length - 2][colno] === 88) {
       // Top
-      if (grid[grid.length - 3]?.[colno] === 77) {
-        if (grid[grid.length - 4]?.[colno] === 65) {
-          if (grid[grid.length - 5]?.[colno] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[grid.length - 3]?.[colno] === 77 &&
+        grid[grid.length - 4]?.[colno] === 65 &&
+        grid[grid.length - 5]?.[colno] === 83
+      ) {
+        result[0]++;
       }
       // Top-Right
-      if (grid[grid.length - 3]?.[colno + 1] === 77) {
-        if (grid[grid.length - 4]?.[colno + 2] === 65) {
-          if (grid[grid.length - 5]?.[colno + 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[grid.length - 3]?.[colno + 1] === 77 &&
+        grid[grid.length - 4]?.[colno + 2] === 65 &&
+        grid[grid.length - 5]?.[colno + 3] === 83
+      ) {
+        result[0]++;
       }
       // Right
-      if (grid[grid.length - 2]?.[colno + 1] === 77) {
-        if (grid[grid.length - 2]?.[colno + 2] === 65) {
-          if (grid[grid.length - 2]?.[colno + 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[grid.length - 2]?.[colno + 1] === 77 &&
+        grid[grid.length - 2]?.[colno + 2] === 65 &&
+        grid[grid.length - 2]?.[colno + 3] === 83
+      ) {
+        result[0]++;
       }
       // Left
-      if (grid[grid.length - 2]?.[colno - 1] === 77) {
-        if (grid[grid.length - 2]?.[colno - 2] === 65) {
-          if (grid[grid.length - 2]?.[colno - 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[grid.length - 2]?.[colno - 1] === 77 &&
+        grid[grid.length - 2]?.[colno - 2] === 65 &&
+        grid[grid.length - 2]?.[colno - 3] === 83
+      ) {
+        result[0]++;
       }
       // Top-Left
-      if (grid[grid.length - 3]?.[colno - 1] === 77) {
-        if (grid[grid.length - 4]?.[colno - 2] === 65) {
-          if (grid[grid.length - 5]?.[colno - 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[grid.length - 3]?.[colno - 1] === 77 &&
+        grid[grid.length - 4]?.[colno - 2] === 65 &&
+        grid[grid.length - 5]?.[colno - 3] === 83
+      ) {
+        result[0]++;
       }
     }
   }
@@ -393,44 +393,44 @@ export function day04(data: Uint8Array) {
     const colno = grid[lineno].length - 2;
     if (grid[lineno][colno] === 88) {
       // Top
-      if (grid[lineno - 1]?.[colno] === 77) {
-        if (grid[lineno - 2]?.[colno] === 65) {
-          if (grid[lineno - 3]?.[colno] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno - 1]?.[colno] === 77 &&
+        grid[lineno - 2]?.[colno] === 65 &&
+        grid[lineno - 3]?.[colno] === 83
+      ) {
+        result[0]++;
       }
       // Bottom
-      if (grid[lineno + 1]?.[colno] === 77) {
-        if (grid[lineno + 2]?.[colno] === 65) {
-          if (grid[lineno + 3]?.[colno] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno + 1]?.[colno] === 77 &&
+        grid[lineno + 2]?.[colno] === 65 &&
+        grid[lineno + 3]?.[colno] === 83
+      ) {
+        result[0]++;
       }
       // Bottom-Left
-      if (grid[lineno + 1]?.[colno - 1] === 77) {
-        if (grid[lineno + 2]?.[colno - 2] === 65) {
-          if (grid[lineno + 3]?.[colno - 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno + 1]?.[colno - 1] === 77 &&
+        grid[lineno + 2]?.[colno - 2] === 65 &&
+        grid[lineno + 3]?.[colno - 3] === 83
+      ) {
+        result[0]++;
       }
       // Left
-      if (grid[lineno]?.[colno - 1] === 77) {
-        if (grid[lineno]?.[colno - 2] === 65) {
-          if (grid[lineno]?.[colno - 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno]?.[colno - 1] === 77 &&
+        grid[lineno]?.[colno - 2] === 65 &&
+        grid[lineno]?.[colno - 3] === 83
+      ) {
+        result[0]++;
       }
       // Top-Left
-      if (grid[lineno - 1]?.[colno - 1] === 77) {
-        if (grid[lineno - 2]?.[colno - 2] === 65) {
-          if (grid[lineno - 3]?.[colno - 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno - 1]?.[colno - 1] === 77 &&
+        grid[lineno - 2]?.[colno - 2] === 65 &&
+        grid[lineno - 3]?.[colno - 3] === 83
+      ) {
+        result[0]++;
       }
     }
   }
@@ -439,44 +439,44 @@ export function day04(data: Uint8Array) {
   for (let colno = 0; colno < grid[2].length; colno++) {
     if (grid[2][colno] === 88) {
       // Right
-      if (grid[2]?.[colno + 1] === 77) {
-        if (grid[2]?.[colno + 2] === 65) {
-          if (grid[2]?.[colno + 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[2]?.[colno + 1] === 77 &&
+        grid[2]?.[colno + 2] === 65 &&
+        grid[2]?.[colno + 3] === 83
+      ) {
+        result[0]++;
       }
       // Bottom-Right
-      if (grid[3]?.[colno + 1] === 77) {
-        if (grid[4]?.[colno + 2] === 65) {
-          if (grid[5]?.[colno + 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[3]?.[colno + 1] === 77 &&
+        grid[4]?.[colno + 2] === 65 &&
+        grid[5]?.[colno + 3] === 83
+      ) {
+        result[0]++;
       }
       // Bottom
-      if (grid[3]?.[colno] === 77) {
-        if (grid[4]?.[colno] === 65) {
-          if (grid[5]?.[colno] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[3]?.[colno] === 77 &&
+        grid[4]?.[colno] === 65 &&
+        grid[5]?.[colno] === 83
+      ) {
+        result[0]++;
       }
       // Bottom-Left
-      if (grid[3]?.[colno - 1] === 77) {
-        if (grid[4]?.[colno - 2] === 65) {
-          if (grid[5]?.[colno - 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[3]?.[colno - 1] === 77 &&
+        grid[4]?.[colno - 2] === 65 &&
+        grid[5]?.[colno - 3] === 83
+      ) {
+        result[0]++;
       }
       // Left
-      if (grid[2]?.[colno - 1] === 77) {
-        if (grid[2]?.[colno - 2] === 65) {
-          if (grid[2]?.[colno - 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[2]?.[colno - 1] === 77 &&
+        grid[2]?.[colno - 2] === 65 &&
+        grid[2]?.[colno - 3] === 83
+      ) {
+        result[0]++;
       }
     }
   }
@@ -486,44 +486,44 @@ export function day04(data: Uint8Array) {
   // those numbers when we do the perimeter rows.
   for (let lineno = 3; lineno < grid.length - 3; lineno++) {
     if (grid[lineno][2] === 88) {
-      if (grid[lineno - 1]?.[2] === 77) {
-        if (grid[lineno - 2]?.[2] === 65) {
-          if (grid[lineno - 3]?.[2] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno - 1]?.[2] === 77 &&
+        grid[lineno - 2]?.[2] === 65 &&
+        grid[lineno - 3]?.[2] === 83
+      ) {
+        result[0]++;
       }
       // Top-Right
-      if (grid[lineno - 1]?.[3] === 77) {
-        if (grid[lineno - 2]?.[4] === 65) {
-          if (grid[lineno - 3]?.[5] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno - 1]?.[3] === 77 &&
+        grid[lineno - 2]?.[4] === 65 &&
+        grid[lineno - 3]?.[5] === 83
+      ) {
+        result[0]++;
       }
       // Right
-      if (grid[lineno]?.[3] === 77) {
-        if (grid[lineno]?.[4] === 65) {
-          if (grid[lineno]?.[5] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno]?.[3] === 77 &&
+        grid[lineno]?.[4] === 65 &&
+        grid[lineno]?.[5] === 83
+      ) {
+        result[0]++;
       }
       // Bottom-Right
-      if (grid[lineno + 1]?.[3] === 77) {
-        if (grid[lineno + 2]?.[4] === 65) {
-          if (grid[lineno + 3]?.[5] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno + 1]?.[3] === 77 &&
+        grid[lineno + 2]?.[4] === 65 &&
+        grid[lineno + 3]?.[5] === 83
+      ) {
+        result[0]++;
       }
       // Bottom
-      if (grid[lineno + 1]?.[2] === 77) {
-        if (grid[lineno + 2]?.[2] === 65) {
-          if (grid[lineno + 3]?.[2] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno + 1]?.[2] === 77 &&
+        grid[lineno + 2]?.[2] === 65 &&
+        grid[lineno + 3]?.[2] === 83
+      ) {
+        result[0]++;
       }
     }
   }
@@ -532,44 +532,44 @@ export function day04(data: Uint8Array) {
   for (let colno = 0; colno < grid[grid.length - 3].length; colno++) {
     if (grid[grid.length - 3][colno] === 88) {
       // Top
-      if (grid[grid.length - 4]?.[colno] === 77) {
-        if (grid[grid.length - 5]?.[colno] === 65) {
-          if (grid[grid.length - 6]?.[colno] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[grid.length - 4]?.[colno] === 77 &&
+        grid[grid.length - 5]?.[colno] === 65 &&
+        grid[grid.length - 6]?.[colno] === 83
+      ) {
+        result[0]++;
       }
       // Top-Right
-      if (grid[grid.length - 4]?.[colno + 1] === 77) {
-        if (grid[grid.length - 5]?.[colno + 2] === 65) {
-          if (grid[grid.length - 6]?.[colno + 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[grid.length - 4]?.[colno + 1] === 77 &&
+        grid[grid.length - 5]?.[colno + 2] === 65 &&
+        grid[grid.length - 6]?.[colno + 3] === 83
+      ) {
+        result[0]++;
       }
       // Right
-      if (grid[grid.length - 3]?.[colno + 1] === 77) {
-        if (grid[grid.length - 3]?.[colno + 2] === 65) {
-          if (grid[grid.length - 3]?.[colno + 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[grid.length - 3]?.[colno + 1] === 77 &&
+        grid[grid.length - 3]?.[colno + 2] === 65 &&
+        grid[grid.length - 3]?.[colno + 3] === 83
+      ) {
+        result[0]++;
       }
       // Left
-      if (grid[grid.length - 3]?.[colno - 1] === 77) {
-        if (grid[grid.length - 3]?.[colno - 2] === 65) {
-          if (grid[grid.length - 3]?.[colno - 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[grid.length - 3]?.[colno - 1] === 77 &&
+        grid[grid.length - 3]?.[colno - 2] === 65 &&
+        grid[grid.length - 3]?.[colno - 3] === 83
+      ) {
+        result[0]++;
       }
       // Top-Left
-      if (grid[grid.length - 4]?.[colno - 1] === 77) {
-        if (grid[grid.length - 5]?.[colno - 2] === 65) {
-          if (grid[grid.length - 6]?.[colno - 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[grid.length - 4]?.[colno - 1] === 77 &&
+        grid[grid.length - 5]?.[colno - 2] === 65 &&
+        grid[grid.length - 6]?.[colno - 3] === 83
+      ) {
+        result[0]++;
       }
     }
   }
@@ -581,44 +581,44 @@ export function day04(data: Uint8Array) {
     const colno = grid[lineno].length - 3;
     if (grid[lineno][colno] === 88) {
       // Top
-      if (grid[lineno - 1]?.[colno] === 77) {
-        if (grid[lineno - 2]?.[colno] === 65) {
-          if (grid[lineno - 3]?.[colno] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno - 1]?.[colno] === 77 &&
+        grid[lineno - 2]?.[colno] === 65 &&
+        grid[lineno - 3]?.[colno] === 83
+      ) {
+        result[0]++;
       }
       // Bottom
-      if (grid[lineno + 1]?.[colno] === 77) {
-        if (grid[lineno + 2]?.[colno] === 65) {
-          if (grid[lineno + 3]?.[colno] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno + 1]?.[colno] === 77 &&
+        grid[lineno + 2]?.[colno] === 65 &&
+        grid[lineno + 3]?.[colno] === 83
+      ) {
+        result[0]++;
       }
       // Bottom-Left
-      if (grid[lineno + 1]?.[colno - 1] === 77) {
-        if (grid[lineno + 2]?.[colno - 2] === 65) {
-          if (grid[lineno + 3]?.[colno - 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno + 1]?.[colno - 1] === 77 &&
+        grid[lineno + 2]?.[colno - 2] === 65 &&
+        grid[lineno + 3]?.[colno - 3] === 83
+      ) {
+        result[0]++;
       }
       // Left
-      if (grid[lineno]?.[colno - 1] === 77) {
-        if (grid[lineno]?.[colno - 2] === 65) {
-          if (grid[lineno]?.[colno - 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno]?.[colno - 1] === 77 &&
+        grid[lineno]?.[colno - 2] === 65 &&
+        grid[lineno]?.[colno - 3] === 83
+      ) {
+        result[0]++;
       }
       // Top-Left
-      if (grid[lineno - 1]?.[colno - 1] === 77) {
-        if (grid[lineno - 2]?.[colno - 2] === 65) {
-          if (grid[lineno - 3]?.[colno - 3] === 83) {
-            result[0]++;
-          }
-        }
+      if (
+        grid[lineno - 1]?.[colno - 1] === 77 &&
+        grid[lineno - 2]?.[colno - 2] === 65 &&
+        grid[lineno - 3]?.[colno - 3] === 83
+      ) {
+        result[0]++;
       }
     }
   }
@@ -639,81 +639,89 @@ export function day04(data: Uint8Array) {
         // Naturally, a statement like `grid[lineno-1][colno] could evaluate to undefined if we were on the perimeter
         // and went out-of-bounds of the array. But, because we've already carefully checked the perimeter above, that
         // can never happen in this loop; so we don't have to worry about that.
-        if (grid[lineno - 1]?.[colno] === 77) {
-          if (grid[lineno - 2]?.[colno] === 65) {
-            if (grid[lineno - 3]?.[colno] === 83) {
-              result[0]++;
-            }
-          }
+        if (
+          grid[lineno - 1]?.[colno] === 77 &&
+          grid[lineno - 2]?.[colno] === 65 &&
+          grid[lineno - 3]?.[colno] === 83
+        ) {
+          result[0]++;
         }
         // Top-Right
-        if (grid[lineno - 1]?.[colno + 1] === 77) {
-          if (grid[lineno - 2]?.[colno + 2] === 65) {
-            if (grid[lineno - 3]?.[colno + 3] === 83) {
-              result[0]++;
-            }
-          }
+        if (
+          grid[lineno - 1]?.[colno + 1] === 77 &&
+          grid[lineno - 2]?.[colno + 2] === 65 &&
+          grid[lineno - 3]?.[colno + 3] === 83
+        ) {
+          result[0]++;
         }
         // Right
-        if (grid[lineno]?.[colno + 1] === 77) {
-          if (grid[lineno]?.[colno + 2] === 65) {
-            if (grid[lineno]?.[colno + 3] === 83) {
-              result[0]++;
-            }
-          }
+        if (
+          grid[lineno]?.[colno + 1] === 77 &&
+          grid[lineno]?.[colno + 2] === 65 &&
+          grid[lineno]?.[colno + 3] === 83
+        ) {
+          result[0]++;
         }
         // Bottom-Right
-        if (grid[lineno + 1]?.[colno + 1] === 77) {
-          if (grid[lineno + 2]?.[colno + 2] === 65) {
-            if (grid[lineno + 3]?.[colno + 3] === 83) {
-              result[0]++;
-            }
-          }
+        if (
+          grid[lineno + 1]?.[colno + 1] === 77 &&
+          grid[lineno + 2]?.[colno + 2] === 65 &&
+          grid[lineno + 3]?.[colno + 3] === 83
+        ) {
+          result[0]++;
         }
         // Bottom
-        if (grid[lineno + 1]?.[colno] === 77) {
-          if (grid[lineno + 2]?.[colno] === 65) {
-            if (grid[lineno + 3]?.[colno] === 83) {
-              result[0]++;
-            }
-          }
+        if (
+          grid[lineno + 1]?.[colno] === 77 &&
+          grid[lineno + 2]?.[colno] === 65 &&
+          grid[lineno + 3]?.[colno] === 83
+        ) {
+          result[0]++;
         }
         // Bottom-Left
-        if (grid[lineno + 1]?.[colno - 1] === 77) {
-          if (grid[lineno + 2]?.[colno - 2] === 65) {
-            if (grid[lineno + 3]?.[colno - 3] === 83) {
-              result[0]++;
-            }
-          }
+        if (
+          grid[lineno + 1]?.[colno - 1] === 77 &&
+          grid[lineno + 2]?.[colno - 2] === 65 &&
+          grid[lineno + 3]?.[colno - 3] === 83
+        ) {
+          result[0]++;
         }
         // Left
-        if (grid[lineno]?.[colno - 1] === 77) {
-          if (grid[lineno]?.[colno - 2] === 65) {
-            if (grid[lineno]?.[colno - 3] === 83) {
-              result[0]++;
-            }
-          }
+        if (
+          grid[lineno]?.[colno - 1] === 77 &&
+          grid[lineno]?.[colno - 2] === 65 &&
+          grid[lineno]?.[colno - 3] === 83
+        ) {
+          result[0]++;
         }
         // Top-Left
-        if (grid[lineno - 1]?.[colno - 1] === 77) {
-          if (grid[lineno - 2]?.[colno - 2] === 65) {
-            if (grid[lineno - 3]?.[colno - 3] === 83) {
-              result[0]++;
-            }
-          }
+        if (
+          grid[lineno - 1]?.[colno - 1] === 77 &&
+          grid[lineno - 2]?.[colno - 2] === 65 &&
+          grid[lineno - 3]?.[colno - 3] === 83
+        ) {
+          result[0]++;
         }
       }
     }
   }
 
   // ====== Part 2 ======
+  // This is much more straightforward.
+  // This is a similar algorithm to the previous part, where we go index by index and radiate outward.
+  // We can simply ignore one outside perimeter row & column because forming this MAS X will require a 3 by 3 grid,
+  // and we'll never find the center of such a grid in the outside perimeter.
   for (let lineno = 1; lineno < grid.length - 1; lineno++) {
     for (let colno = 1; colno < grid[lineno].length - 1; colno++) {
+      // Naturally, 65=A
       if (grid[lineno][colno] === 65) {
         const tl = grid[lineno - 1]?.[colno - 1];
         const tr = grid[lineno - 1]?.[colno + 1];
         const bl = grid[lineno + 1]?.[colno - 1];
         const br = grid[lineno + 1]?.[colno + 1];
+        // 77=M and 83=S
+        // This checks for the 4 possible different configurations this X could be formed in. MAS/MAS, MAS/SAM,
+        // SAM/MAS, and SAM/SAM (forward and backward).
         if (
           (tl === 77 && br === 83 && tr === 77 && bl === 83) ||
           (tl === 77 && br === 83 && tr === 83 && bl === 77) ||
